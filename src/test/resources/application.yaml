@@ -1,0 +1,4 @@
+wuwii:
+  feishu:
+    app-id: ${appId}
+    app-secret: ${appSecret}
