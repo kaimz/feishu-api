@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.wuwii"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.8-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 configurations {
@@ -19,6 +19,15 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven("https://maven.aliyun.com/repository/public")
+    maven("https://maven.aliyun.com/repository/central")
+    maven {
+        url = uri("https://packages.aliyun.com/maven/repository/2054354-snapshot-vSXJCj/")
+        credentials {
+            username = System.getenv("REP_USERNAME")
+            password = System.getenv("REP_PASSWORD")
+        }
+    }
 }
 
 dependencies {
